@@ -13,15 +13,15 @@ export class UsersService {
   }
 
   postData(user) {
-    let url = "https://jsonplaceholder.typicode.com/users/";
-    // return this.http.post(url, user);
-    fetch(url, {
-      method: "POST",
-      body: JSON.stringify(user),
-      headers: {
-        "Content-type": "application/json; charset=UTF-8",
-      },
-    });
-    console.log(user);
+    const url = 'https://jsonplaceholder.typicode.com/users/';
+    return this.http.post(url, user);
+    // fetch(url, {
+    //   method: "POST",
+    //   body: JSON.stringify(user),
+    //   headers: {
+    //     "Content-type": "application/json; charset=UTF-8",
+    //   },
+    // });
+    // console.log(user);
   }
 }

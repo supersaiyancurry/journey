@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import {} from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http'
+import {UsersService} from './users.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { HttpClientModule } from '@angular/common/http'
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [UsersService], // include any services you want provided here
   bootstrap: [AppComponent]
 })
 export class AppModule { }
